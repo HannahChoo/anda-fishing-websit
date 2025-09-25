@@ -1,0 +1,414 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Dynamic Gradient Flow */
+  .animate-gradient-flow {
+    background-size: 400% 400%;
+    animation: gradient-flow 20s ease infinite;
+  }
+  
+  @keyframes gradient-flow {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0% 100%;
+    }
+  }
+  
+  /* Floating Orbs */
+  .floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    filter: blur(1px);
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .orb-1 {
+    width: 120px;
+    height: 120px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .orb-2 {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+  
+  .orb-3 {
+    width: 100px;
+    height: 100px;
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+  }
+  
+  .orb-4 {
+    width: 60px;
+    height: 60px;
+    top: 40%;
+    right: 30%;
+    animation-delay: 6s;
+  }
+  
+  .orb-5 {
+    width: 140px;
+    height: 140px;
+    bottom: 20%;
+    right: 10%;
+    animation-delay: 1s;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) scale(1);
+      opacity: 0.7;
+    }
+    25% {
+      transform: translateY(-20px) translateX(10px) scale(1.1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translateY(-10px) translateX(-15px) scale(0.9);
+      opacity: 0.5;
+    }
+    75% {
+      transform: translateY(15px) translateX(20px) scale(1.05);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Mouse Following Particles */
+  .particle-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .particle-1 { animation-delay: 0s; }
+  .particle-2 { animation-delay: 0.5s; }
+  .particle-3 { animation-delay: 1s; }
+  .particle-4 { animation-delay: 1.5s; }
+  .particle-5 { animation-delay: 2s; }
+  .particle-6 { animation-delay: 2.5s; }
+  .particle-7 { animation-delay: 3s; }
+  .particle-8 { animation-delay: 3.5s; }
+  
+  /* Heart Animation */
+  .heart-fly {
+    animation: heartFly 1s ease-in-out forwards;
+  }
+  
+  @keyframes heartFly {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(calc(-50% + var(--target-x)), calc(-50% + var(--target-y))) scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(calc(-50% + var(--target-x)), calc(-50% + var(--target-y))) scale(0.5);
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    /* Tailwind utility classes */
+    @apply border-border;
+  }
+  body {
+    /* Tailwind utility classes */
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Flowing River Background Effects */
+@keyframes waterFlow {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes waveOverlay {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+@keyframes ripple {
+  0% {
+    transform: rotate(15deg) scale(0);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(15deg) scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes waveFlow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100px) translateX(50px);
+    opacity: 0;
+  }
+}
+
+.water-flow-bg {
+  background: linear-gradient(120deg, 
+    #ef4444 0%,  /* red-500 */
+    #dc2626 15%, /* red-600 */
+    #7c3aed 30%, /* violet-600 */
+    #1e40af 50%, /* blue-800 */
+    #1e3a8a 65%, /* blue-900 */
+    #1e40af 80%, /* blue-800 */
+    #7c3aed 90%, /* violet-600 */
+    #ef4444 100% /* red-500 */
+  );
+  background-size: 400% 400%;
+  animation: waterFlow 20s ease infinite;
+  position: relative;
+}
+
+.water-flow-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  animation: waveOverlay 12s ease-in-out infinite;
+  z-index: 0;
+}
+
+.water-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.water-ripple::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: ripple 6s infinite linear;
+  transform: rotate(15deg);
+  z-index: 0;
+}
+
+.water-ripple::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+  animation: waveFlow 8s infinite linear;
+  z-index: 0;
+}
+
+.water-ripple .floating-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.water-ripple .floating-particles::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: float 6s infinite linear;
+  left: 10%;
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.water-ripple .floating-particles::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: float 8s infinite linear;
+  left: 90%;
+  top: 80%;
+  animation-delay: 3s;
+}
+
+.water-ripple .floating-particles .particle-1 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: float 5s infinite linear;
+  left: 40%;
+  top: 60%;
+  animation-delay: 1s;
+}
+
+.water-ripple .floating-particles .particle-2 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: float 7s infinite linear;
+  left: 70%;
+  top: 40%;
+  animation-delay: 2.5s;
+}
+
+.water-ripple .floating-particles .particle-3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 9s infinite linear;
+  left: 30%;
+  top: 80%;
+  animation-delay: 4s;
+}
