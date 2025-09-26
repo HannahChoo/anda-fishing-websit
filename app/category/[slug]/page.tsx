@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ChevronDown, Heart } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { LanguageSelector } from "@/components/LanguageSelector"
@@ -2087,7 +2088,14 @@ export default function CategoryPage() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="text-2xl font-bold text-blue-600 flex-shrink-0">
-              <img src="/images/anda-logo.png" alt="ANDA Logo" className="h-8 w-auto" />
+                <Image 
+                  src="/images/anda-logo.png" 
+                  alt="ANDA Logo" 
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto" 
+                  priority
+                />
             </Link>
 
             {/* Navigation */}
@@ -2234,10 +2242,13 @@ export default function CategoryPage() {
                 {subCategories.map((subCategory) => (
                   <Link key={subCategory.slug} href={`/category/${subCategory.slug}`} className="group">
                     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                      <img
+                      <Image
                         src={subCategory.image || "/placeholder.svg"}
                         alt={subCategory.name}
+                        width={300}
+                        height={200}
                         className="w-full h-full object-cover"
+                        quality={90}
                       />
                       <div className="p-4 border-t shadow-lg border-gray-200">
                         <h3 className="font-semibold text-lg mb-2 group-hover:text-blue-600">{translateProductName(subCategory.name)}</h3>
@@ -2261,18 +2272,24 @@ export default function CategoryPage() {
                         </div>
                       )}
                       <div className="relative">
-                        <img
+                        <Image
                           src={product.image || "/placeholder.svg"}
                           alt={product.name}
+                          width={300}
+                          height={192}
                           className="w-full h-48 object-cover"
+                          quality={90}
                         />
                         {/* Award Logo for award-winning products - positioned on the image */}
                         {(product.name === "4CRAW(Weedless)" || product.name === "4CRAW(Back Jump)" || product.name === "4CRAW(JIG Head)" || product.name === "4MLS-1" || product.name === "3MLS-1") && (
                           <div className="absolute bottom-2 left-2 z-10">
-                            <img 
+                            <Image 
                               src="/images/china fish.png" 
                               alt="Award Logo" 
+                              width={40}
+                              height={32}
                               className="h-8 w-auto drop-shadow-lg"
+                              quality={90}
                             />
                           </div>
                         )}

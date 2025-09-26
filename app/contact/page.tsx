@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { LanguageSelector } from "@/components/LanguageSelector"
 import { FadeInOnScroll } from "@/components/FadeInOnScroll"
@@ -1655,10 +1656,13 @@ export default function ContactPage() {
                         <div key={index} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
                           <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 overflow-hidden">
                             {item.image && item.image !== '' ? (
-                              <img 
+                              <Image 
                                 src={item.image} 
                                 alt={item.name}
+                                width={48}
+                                height={48}
                                 className="w-full h-full object-cover"
+                                quality={90}
                               />
                             ) : (
                               <div className="w-full h-full bg-gray-300 flex items-center justify-center text-xs text-gray-500">

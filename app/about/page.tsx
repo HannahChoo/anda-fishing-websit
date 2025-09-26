@@ -861,7 +861,14 @@ export default function AboutPage() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="text-2xl font-bold text-blue-600 flex-shrink-0">
-              <img src="/images/anda-logo.png" alt="ANDA Logo" className="h-8 w-auto" />
+                <Image 
+                  src="/images/anda-logo.png" 
+                  alt="ANDA Logo" 
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto" 
+                  priority
+                />
             </Link>
 
             {/* Navigation */}
@@ -996,11 +1003,12 @@ export default function AboutPage() {
       <section className="relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/about us.jpg?height=600&width=1920"
+            src="/about us.jpg"
             alt="About us hero"
             fill
             className="object-cover"
             priority
+            quality={90}
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
@@ -1029,10 +1037,11 @@ export default function AboutPage() {
               </div>
               <div className="relative h-[400px] overflow-hidden rounded-lg shadow-xl">
                 <Image
-                  src="/our story.jpg?height=400&width=600"
+                  src="/our story.jpg"
                   alt="Our company story"
                   fill
                   className="object-cover"
+                  quality={90}
                 />
               </div>
             </div>
@@ -1138,10 +1147,11 @@ export default function AboutPage() {
               </div>
               <div className="order-1 lg:order-2 relative h-[400px] overflow-hidden rounded-lg shadow-xl">
                 <Image 
-                  src="/why us.jpg?height=400&width=600" 
+                  src="/why us.jpg" 
                   alt="Why choose us" 
                   fill 
                   className="object-cover transition-transform duration-300 hover:scale-105"
+                  quality={90}
                 />
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Heart, Mail, Share2, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -3993,7 +3994,14 @@ export default function ProductPage() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="text-2xl font-bold text-blue-600 flex-shrink-0">
-              <img src="/images/anda-logo.png" alt="ANDA Logo" className="h-8 w-auto" />
+                <Image 
+                  src="/images/anda-logo.png" 
+                  alt="ANDA Logo" 
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto" 
+                  priority
+                />
             </Link>
 
             {/* Navigation */}
@@ -4157,10 +4165,14 @@ export default function ProductPage() {
                     // onMouseEnter={handleMouseEnter}
                     // onMouseLeave={handleMouseLeave}
                   >
-                    <img
+                    <Image
                       src={productImages[selectedImage] || "/placeholder.svg"}
                       alt={product.name}
+                      width={800}
+                      height={800}
                       className="w-full h-full object-cover"
+                      quality={95}
+                      priority
                     />
                     
                     {/* Zoom Overlay - TEMPORARILY DISABLED */} 
@@ -4181,14 +4193,17 @@ export default function ProductPage() {
                   {/* Zoom Preview - TEMPORARILY DISABLED */}
                   {/* {showZoom && ( 同上
                     <div className="absolute top-0 left-full ml-4 w-72 h-72 bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg z-10">
-                      <img
+                      <Image
                         src={productImages[selectedImage] || "/placeholder.svg"}
                         alt={product.name}
+                        width={288}
+                        height={288}
                         className="w-full h-full object-cover"
                         style={{
                           transform: `scale(4)`,
                           transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
                         }}
+                        quality={95}
                       />
                     </div>
                   )} */}
@@ -4204,10 +4219,13 @@ export default function ProductPage() {
                         selectedImage === index ? "border-blue-600" : "border-transparent"
                       }`}
                     >
-                      <img
+                      <Image
                         src={image || "/placeholder.svg"}
                         alt={`${product.name} ${index + 1}`}
+                        width={200}
+                        height={200}
                         className="w-full h-full object-cover"
+                        quality={90}
                       />
                     </button>
                   ))}
@@ -4220,10 +4238,13 @@ export default function ProductPage() {
                 {(product.name === "4MLS-1" || product.name === "3MLS-1") && (
                   <div className="text-center mb-6">
                     <div className="flex flex-col items-center space-y-3">
-                      <img 
+                      <Image 
                         src="/images/china fish.png" 
                         alt="Brand Logo" 
+                        width={80}
+                        height={64}
                         className="h-16 w-auto"
+                        quality={90}
                       />
                       <p className="text-blue-800 font-semibold text-lg">
                         WINNER 2014 BEST IN SHOW
@@ -4236,10 +4257,13 @@ export default function ProductPage() {
                 {(product.name === "4CRAW(Weedless)" || product.name === "4CRAW(Back Jump)" || product.name === "4CRAW(JIG Head)") && (
                   <div className="text-center mb-6">
                     <div className="flex flex-col items-center space-y-3">
-                      <img 
+                      <Image 
                         src="/images/china fish.png" 
                         alt="Brand Logo" 
+                        width={80}
+                        height={64}
                         className="h-16 w-auto"
+                        quality={90}
                       />
                       <p className="text-blue-800 font-semibold text-lg">
                         WINNER 2015 BEST IN SHOW
@@ -4346,10 +4370,13 @@ export default function ProductPage() {
                 <div className="w-full">
                   {(product.detailImages || []).map((image, index) => (
                     <div key={index} className="w-full">
-                      <img
+                      <Image
                         src={image || "/placeholder.svg"}
                         alt={`${product.name} - ${index + 1}`}
+                        width={800}
+                        height={600}
                         className="w-full h-auto object-contain"
+                        quality={90}
                       />
                     </div>
                   ))}

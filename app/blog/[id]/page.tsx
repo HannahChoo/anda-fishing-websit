@@ -544,7 +544,14 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="text-2xl font-bold text-blue-600 flex-shrink-0">
-              <img src="/images/anda-logo.png" alt="ANDA Logo" className="h-8 w-auto" />
+                <Image 
+                  src="/images/anda-logo.png" 
+                  alt="ANDA Logo" 
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto" 
+                  priority
+                />
             </Link>
 
             {/* Navigation */}

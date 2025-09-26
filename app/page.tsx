@@ -2,6 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { ChevronDown, Heart } from "lucide-react"
 import { useEffect, useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
@@ -546,7 +547,14 @@ export default function HomePage() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="text-2xl font-bold text-blue-600 flex-shrink-0">
-              <img src="/images/anda-logo.png" alt="ANDA Logo" className="h-8 w-auto" />
+                <Image 
+                  src="/images/anda-logo.png" 
+                  alt="ANDA Logo" 
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto" 
+                  priority
+                />
             </Link>
 
             {/* Navigation */}
@@ -735,6 +743,7 @@ export default function HomePage() {
       </section>
 
       {/* Event Notification Section */}
+      {false && (
       <section className="py-16 bg-white">
         <FadeInOnScroll>
           <div className="container mx-auto px-4 text-center">
@@ -760,6 +769,7 @@ export default function HomePage() {
           </div>
         </FadeInOnScroll>
       </section>
+      )}
 
       {/* About Section */}
       <section className="py-16">
@@ -781,10 +791,13 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               <Link href="/category/hard-lure" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                  <img
-                    src="/home/hard.png?height=200&width=300&text=Hard+Lures"
+                  <Image
+                    src="/home/hard.png"
                     alt="Hard Lures"
+                    width={300}
+                    height={200}
                     className="w-full h-full object-cover"
+                    quality={90}
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.hardLure}</h3>
@@ -794,10 +807,13 @@ export default function HomePage() {
 
               <Link href="/category/soft-lure" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                  <img
-                    src="/home/soft.png?height=200&width=300&text=Soft+Lures"
+                  <Image
+                    src="/home/soft.png"
                     alt="Soft Lures"
+                    width={300}
+                    height={200}
                     className="w-full h-full object-cover"
+                    quality={90}
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.softLure}</h3>
@@ -807,10 +823,13 @@ export default function HomePage() {
 
               <Link href="/category/metal-lure" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                  <img
-                    src="/home/metal.png?height=200&width=300&text=Metal+Lures"
+                  <Image
+                    src="/home/metal.png"
                     alt="Metal Lures"
+                    width={300}
+                    height={200}
                     className="w-full h-full object-cover"
+                    quality={90}
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.metalLure}</h3>
@@ -820,10 +839,13 @@ export default function HomePage() {
 
               <Link href="/category/squid-lure" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                  <img
-                    src="/home/squid.png?height=200&width=300&text=Squid+Lures"
+                  <Image
+                    src="/home/squid.png"
                     alt="Squid Lures"
+                    width={300}
+                    height={200}
                     className="w-full h-full object-cover"
+                    quality={90}
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.squidLure}</h3>
@@ -833,10 +855,13 @@ export default function HomePage() {
 
               <Link href="/category/accessory" className="group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                  <img
-                    src="/home/access.png?height=200&width=300&text=Accessory"
+                  <Image
+                    src="/home/access.png"
                     alt="Accessory"
+                    width={300}
+                    height={200}
                     className="w-full h-full object-cover"
+                    quality={90}
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.accessory}</h3>
