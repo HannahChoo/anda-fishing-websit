@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
             <hr style="margin: 20px 0; border: none; border-top: 1px solid #dee2e6;">
             
             <p><strong>Reply to this customer:</strong> <a href="mailto:${email}">${email}</a></p>
-            <p><em>This message was sent from the ANDA sports. website contact form.</em></p>
+            <p><em>This message was sent from the ANDA sports website contact form.</em></p>
         </div>
     </div>
 </body>
@@ -143,7 +143,7 @@ export async function POST(request: NextRequest) {
 <body>
     <div class="container">
         <div class="header">
-            <h2>Thank You for Contacting ANDA Fishing</h2>
+            <h2>Thank You for Contacting ANDA Sports</h2>
         </div>
         
         <div class="content">
@@ -162,7 +162,7 @@ export async function POST(request: NextRequest) {
         </div>
         
         <div class="footer">
-            <p><strong>ANDA Fishing Contact Information:</strong></p>
+            <p><strong>ANDA Sports Contact Information:</strong></p>
             <p>📍 Address: NO.3-1, Minjiang Street, Weihai, #264203, Shandong, China</p>
             <p>📞 Phone: +86-18663108236</p>
             <p>📞 Tel: +86-0631-5758228/5757585</p>

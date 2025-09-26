@@ -422,6 +422,26 @@ export default function HomePage() {
   const { language } = useLanguage()
   const t = translations[language]
   const [showVideo, setShowVideo] = useState<boolean>(false)
+  const videoSectionRef = useRef<HTMLDivElement>(null)
+
+  // Mount the video only when the section enters the viewport to avoid early network usage
+  useEffect(() => {
+    const section = videoSectionRef.current
+    if (!section) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShowVideo(true)
+            observer.disconnect()
+          }
+        })
+      },
+      { root: null, rootMargin: '0px 0px -100px 0px', threshold: 0.15 }
+    )
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
 
   // Mouse following effect for both hero and CTA sections
   React.useEffect(() => {
@@ -721,37 +741,26 @@ export default function HomePage() {
       </section>
 
       {/* Video Section - click to play, no preload */}
-      <section className="w-full bg-gray-50">
+      <section className="w-full bg-gray-50" ref={videoSectionRef}>
         <div className="w-full">
           <div className="relative w-full h-[70vh] md:h-[80vh] lg:h-[90vh] bg-gray-900 overflow-hidden">
-            {/* Click-to-play overlay (no network fetch before click) */}
+            {/* Before in-view, show a tasteful animated gradient placeholder */}
             {!showVideo && (
-              <button
-                type="button"
-                onClick={() => setShowVideo(true)}
-                className="absolute inset-0 w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 via-gray-900 to-black"
-                aria-label="Play ANDA introduction video"
-              >
-                <span className="inline-flex items-center justify-center rounded-full bg-black/60 hover:bg-black/70 transition-colors w-16 h-16">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8 ml-1">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-              </button>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-black animate-pulse" aria-hidden="true" />
             )}
 
             {showVideo && (
               <video
                 className="w-full h-full object-cover"
-                src="/videos/anda-intro.mp4"
-                preload="none"
-                controls
+                autoPlay
+                loop
+                muted
                 playsInline
+                preload="metadata"
                 aria-label="ANDA Company Introduction Video"
-                onLoadedMetadata={(e) => {
-                  try { (e.currentTarget as HTMLVideoElement).play().catch(() => {}); } catch {}
-                }}
               >
+                <source src="/videos/anda-intro.webm" type="video/webm" />
+                <source src="/videos/anda-intro.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             )}
