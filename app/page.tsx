@@ -421,6 +421,7 @@ const translations = {
 export default function HomePage() {
   const { language } = useLanguage()
   const t = translations[language]
+  const [showVideo, setShowVideo] = useState<boolean>(false)
 
   // Mouse following effect for both hero and CTA sections
   React.useEffect(() => {
@@ -719,25 +720,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video Section */}
+      {/* Video Section - click to play, no preload */}
       <section className="w-full bg-gray-50">
         <div className="w-full">
           <div className="relative w-full h-[70vh] md:h-[80vh] lg:h-[90vh] bg-gray-900 overflow-hidden">
-            <video
-              className="w-full h-full object-cover"
-              src="/videos/anda-intro.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster="/images/video-poster.png"
-              aria-label="ANDA Company Introduction Video"
-            >
-              Your browser does not support the video tag.
-            </video>
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              {/* You can add text or other elements here if desired */}
-            </div>
+            {/* Click-to-play overlay (no network fetch before click) */}
+            {!showVideo && (
+              <button
+                type="button"
+                onClick={() => setShowVideo(true)}
+                className="absolute inset-0 w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 via-gray-900 to-black"
+                aria-label="Play ANDA introduction video"
+              >
+                <span className="inline-flex items-center justify-center rounded-full bg-black/60 hover:bg-black/70 transition-colors w-16 h-16">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8 ml-1">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+              </button>
+            )}
+
+            {showVideo && (
+              <video
+                className="w-full h-full object-cover"
+                src="/videos/anda-intro.mp4"
+                preload="none"
+                controls
+                playsInline
+                aria-label="ANDA Company Introduction Video"
+                onLoadedMetadata={(e) => {
+                  try { (e.currentTarget as HTMLVideoElement).play().catch(() => {}); } catch {}
+                }}
+              >
+                Your browser does not support the video tag.
+              </video>
+            )}
           </div>
         </div>
       </section>
@@ -797,7 +814,8 @@ export default function HomePage() {
                     width={300}
                     height={200}
                     className="w-full h-full object-cover"
-                    quality={90}
+                    quality={60}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.hardLure}</h3>
@@ -813,7 +831,8 @@ export default function HomePage() {
                     width={300}
                     height={200}
                     className="w-full h-full object-cover"
-                    quality={90}
+                    quality={60}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.softLure}</h3>
@@ -829,7 +848,8 @@ export default function HomePage() {
                     width={300}
                     height={200}
                     className="w-full h-full object-cover"
-                    quality={90}
+                    quality={60}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.metalLure}</h3>
@@ -845,7 +865,8 @@ export default function HomePage() {
                     width={300}
                     height={200}
                     className="w-full h-full object-cover"
-                    quality={90}
+                    quality={60}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.squidLure}</h3>
@@ -861,7 +882,8 @@ export default function HomePage() {
                     width={300}
                     height={200}
                     className="w-full h-full object-cover"
-                    quality={90}
+                    quality={60}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
                   />
                   <div className="p-4">
                     <h3 className="font-semibold text-lg group-hover:text-blue-600">{t.accessory}</h3>
