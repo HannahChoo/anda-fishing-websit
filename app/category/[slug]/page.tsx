@@ -374,7 +374,7 @@ const translations = {
     jerkbaitDesc: "Çekme sırasında mükemmel performans, sarsma sırasında gerçek balık gibi. Çoğunda manyetik ağırlık transfer sistemi var. Tatlı ve tuzlu su için uygun.",
     crankBaitDesc: "Mükemmel hareket için el testli. Çeşitli stiller/derinlikler tüm koşulları kapsar.",
     topWaterDesc: "Beslenen balıklar için mükemmel. Çoğu daha fazla çekmek için büyük ses sistemleri içerir.",
-    liveDesc: "Gerçekçi efekt için canlı yüzme hareketi ve doğal renkler ile gerçek balık şekli.",
+    liveDesc: "Gerçekçi efekt için canlı yüzme hareketi ve doğal renklerle gerçek balık şekli.",
     adstSeriesDesc: "Gelişmiş yumuşak kuyruk tasarımları.",
     shrimpDesc: "Gerçekçi karides taklitleri.",
     crawDesc: "Gerçekçi kerevit yemleri.",
@@ -1538,7 +1538,7 @@ live:[
       id: "frog58",
       name: "Frog58",
       description: "58mm 11.5g TOP WATER",
-      image: "/product/frog/frog
+      image: "/product/frog/frog.png?height=200&width=200&text=Frog58",
   },
 ],
 mslSeries:[
