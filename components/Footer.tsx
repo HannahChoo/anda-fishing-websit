@@ -178,7 +178,7 @@ const translations = {
   wechat: "an18663108236",
   email: "sales@andalure.com/truman@andalure.com",
   followUs: "Siga-nos",
-  copyright: "© 2023 ANDA. Todos os direitos reservados."
+  copyright: "© 2025 ANDA. Todos os direitos reservados."
 },
 }
 

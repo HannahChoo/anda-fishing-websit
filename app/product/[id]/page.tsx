@@ -784,16 +784,16 @@ inna60: {
   name: "INNA60",
   description:
     "60mm 5.6g Floating",
-  image: "/product/INNA/inna60-1.png?height=400&width=400&text=INNA60+1",
+  image: "/product/inna/inna60-1.png?height=400&width=400&text=INNA60+1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "60mm",
@@ -812,16 +812,16 @@ inna70: {
   name: "INNA70",
   description:
     "74mm 11g Slow Sinking/Magnet Long Cast",
-  image: "/product/INNA/inna70-1.png?height=400&width=400&text=INNA70-1",
+  image: "/product/inna/inna70-1.png?height=400&width=400&text=INNA70-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "74mm",
@@ -842,16 +842,16 @@ inna90: {
   name: "INNA90",
   description:
     "95mm 16.5g Slow Sinking/Magnet Long Cast",
-  image: "/product/INNA/inna90-1.png?height=400&width=400&text=INNA90-1",
+  image: "/product/inna/inna90-1.png?height=400&width=400&text=INNA90-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "95mm",
@@ -872,16 +872,16 @@ inna110: {
   name: "INNA110",
   description:
     "115mm 23.2g Slow Sinking/Magnet Long Cast",
-  image: "/product/INNA/inna110-1.png?height=400&width=400&text=INNA110-1",
+  image: "/product/inna/inna110-1.png?height=400&width=400&text=INNA110-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "115mm",
@@ -901,16 +901,16 @@ inna110DD: {
   name: "INNA110 DD",
   description:
     "110mm 28.7g Floating",
-  image: "/product/INNA/inna110dd-1.png?height=400&width=400&text=INNA110dd-1",
+  image: "/product/inna/inna110dd-1.png?height=400&width=400&text=INNA110dd-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "110mm",
@@ -929,16 +929,16 @@ inna110MD: {
   name: "INNA110 MD",
   description:
     "110 26.7g Floating",
-  image: "/product/INNA/inna110md-1.png?height=400&width=400&text=INNA110md-1",
+  image: "/product/inna/inna110md-1.png?height=400&width=400&text=INNA110md-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "110mm",
@@ -957,16 +957,16 @@ inna140: {
   name: "INNA140",
   description:
     "140 36g Slow Sinking/Magnet Long Cast",
-  image: "/product/INNA/inna140-1.png?height=400&width=400&text=INNA140-1",
+  image: "/product/inna/inna140-1.png?height=400&width=400&text=INNA140-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "140mm",
@@ -987,16 +987,16 @@ inna165: {
   name: "INNA165",
   description:
     "165mm 53.4g Floating",
-  image: "/product/INNA/inna165-1.png?height=400&width=400&text=INNA165-1",
+  image: "/product/inna/inna165-1.png?height=400&width=400&text=INNA165-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "165mm",
@@ -1015,16 +1015,16 @@ inna165DD: {
   name: "INNA165 DD",
   description:
     "165mm 66.3g Floating",
-  image: "/product/INNA/inna165dd-1.png?height=400&width=400&text=INNA165dd-1",
+  image: "/product/inna/inna165dd-1.png?height=400&width=400&text=INNA165dd-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "165mm",
@@ -1043,16 +1043,16 @@ inna165MD: {
   name: "INNA165 MD",
   description:
     "165mm 51.3g Floating",
-  image: "/product/INNA/inna165md-1.png?height=400&width=400&text=INNA165md-1",
+  image: "/product/inna/inna165md-1.png?height=400&width=400&text=INNA165md-1",
   images: [
-    "/product/INNA/inna-2.jpg?height=400&width=400&text=INNA-2",
-    "/product/INNA/inna-3.jpg?height=400&width=400&text=INNA-3",
-    "/product/INNA/inna-4.jpg?height=400&width=400&text=INNA-4",
+    "/product/inna/inna-2.jpg?height=400&width=400&text=INNA-2",
+    "/product/inna/inna-3.jpg?height=400&width=400&text=INNA-3",
+    "/product/inna/inna-4.jpg?height=400&width=400&text=INNA-4",
   ],
   detailImages: [
     "/product/jerkbait.png",
-    "/product/INNA/inna-5.jpg",
-    "/product/INNA/inna-6.jpg",
+    "/product/inna/inna-5.jpg",
+    "/product/inna/inna-6.jpg",
   ],
   specifications: {
     Size: "165mm",
